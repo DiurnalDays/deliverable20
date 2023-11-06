@@ -3,7 +3,7 @@ var video;
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
 
-	video.autoplay = false;
+	//video.autoplay = false;
 	video.load();
 	video.loop=false
 	document.querySelector("#play").addEventListener("click", function() {
