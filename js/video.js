@@ -1,19 +1,19 @@
 var video;
 
-let vid = document.getElementById("video");
-
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-	vid.autoplay = true;
-	vid.load();
+
+	video.autoplay = false;
+	video.load();
+	video.loop=false
+	document.querySelector("#play").addEventListener("click", function() {
+		console.log("Play Video");
+		vid.play();
+	});
+	document.querySelector("#pause").addEventListener("click", function() {
+		console.log("Pause Video");
+		vid.pause();
+		});
 });
 
-document.querySelector("#play").addEventListener("click", function() {
-console.log("Play Video");
-vid.play();
-});
-document.querySelector("#pause").addEventListener("click", function() {
-	console.log("Pause Video");
-	vid.pause();
-	});
 	
