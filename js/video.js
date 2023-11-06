@@ -8,11 +8,11 @@ window.addEventListener("load", function() {
 	video.loop=false
 	document.querySelector("#play").addEventListener("click", function() {
 		console.log("Play Video");
-		vid.play();
+		video.play();
 	});
 	document.querySelector("#pause").addEventListener("click", function() {
 		console.log("Pause Video");
-		vid.pause();
+		video.pause();
 		});
 });
 
