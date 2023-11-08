@@ -43,7 +43,7 @@ window.addEventListener("load", function() {
 	});
 	document.querySelector("#slider").addEventListener("input", function(){
 		video.volume = this.value/100;
-		document.querySelector("#volume").textContent=this/value+"%";
+		document.querySelector("#volume").textContent=this.value+"%";
 		  });
     document.querySelector("#orig").addEventListener("click", function(){
 		video.classList.remove("oldSchool");
