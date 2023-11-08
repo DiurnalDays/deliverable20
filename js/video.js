@@ -17,8 +17,8 @@ window.addEventListener("load", function() {
 		video.pause();
 		});
 	document.querySelector("#slower").addEventListener("click", function() {
-			video.playbackRate=0.9;
-			console.log("Volume slowed by " + video.playbackRate);
+			video.playbackRate*=.9;
+			console.log("The current playback speed is " + video.playbackRate);
 		});
 	document.querySelector("#skip").addEventListener("click", function(){
 			video.currentTime+=10;
