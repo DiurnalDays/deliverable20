@@ -23,11 +23,12 @@ window.addEventListener("load", function() {
 		});
 	document.querySelector("#faster").addEventListener("click", function(){
 		video.playbackRate/=.9;
-		console.log("New speed is " + video.playbackRate);
+		console.log("The current playback speed is " + video.playbackRate);
 	});
 	document.querySelector("#skip").addEventListener("click", function(){
 			if (video.currentTime + 10>=video.duration)
-				{video.currentTime=0;}
+				{video.currentTime=0;
+				console.log("Restarting video");}
 			else
 			    {video.currentTime+=10;}
 			console.log("The current time of the video is " + video.currentTime)
