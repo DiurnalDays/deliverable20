@@ -21,10 +21,18 @@ window.addEventListener("load", function() {
 			console.log("Volume slowed by " + video.playbackRate);
 		});
 	document.querySelector("#skip").addEventListener("click", function(){
-			
+
 			if (video.ended)
 				video.currentTime=0;
 	});
+	this.document.querySelector("#slider").addEventListener("change", function(){
+		slider.addEventListener('change', () => {
+			video.volume = slider.value / 100;
+			
+			updateVolumeDisplay();
+		  });
 	});
+	});
+
 
 	
