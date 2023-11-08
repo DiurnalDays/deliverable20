@@ -25,7 +25,12 @@ window.addEventListener("load", function() {
 			if (video.ended)
 				video.currentTime=0;
 	});
-	this.document.querySelector("#slider").addEventListener("change", function(){
+	document.querySelector("#mute").addEventListener("click", function(){
+		if (video.muted==false){video.muted=true;}
+		else 
+			{video.muted=false}
+	});
+	document.querySelector("#slider").addEventListener("change", function(){
 		slider.addEventListener('change', () => {
 			video.volume = slider.value / 100;
 			
