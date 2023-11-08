@@ -9,15 +9,16 @@ window.addEventListener("load", function() {
 	document.querySelector("#play").addEventListener("click", function() {
 		console.log("Play Video");
 		video.play();
-		video.volume = volume;
-	});
+		videoElement.onvolumechange = () => {
+			const newVolume = video.volume;
+	}});
 	document.querySelector("#pause").addEventListener("click", function() {
 		console.log("Pause Video");
 		video.pause();
 		});
 	document.querySelector("#slower").addEventListener("click", function() {
-			console.log("Volume slowed by ");
 			video.playbackRate=0.9;
+			console.log("Volume slowed by " + video.playbackRate);
 		});
 });
 
