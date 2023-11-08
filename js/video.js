@@ -21,12 +21,14 @@ window.addEventListener("load", function() {
 			console.log("Volume slowed by " + video.playbackRate);
 		});
 	document.querySelector("#skip").addEventListener("click", function(){
-
-			if (video.ended)
-				video.currentTime=0;
+			video.currentTime+=10;
+			console.log("The current time of the video is " + video.currentTime)
+			if (video.currentTime>=video.duration)
+				{video.currentTime=0;}
 	});
 	document.querySelector("#mute").addEventListener("click", function(){
-		if (video.muted==false){video.muted=true;}
+		if (video.muted==false)
+			{video.muted=true;}
 		else 
 			{video.muted=false}
 	});
